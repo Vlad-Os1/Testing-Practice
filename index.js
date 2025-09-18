@@ -61,7 +61,17 @@ export function caesarCipher(string, shift) {
 }
 
 export function analyzeArray(arr) {
+  let average = 0;
+  arr.forEach((number) => {
+    average += number;
+  });
+  average = average / arr.length;
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
   return {
+    average,
+    min,
+    max,
     length: arr.length,
   };
 }
