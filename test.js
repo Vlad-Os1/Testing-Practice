@@ -50,6 +50,10 @@ test('Punctuation, spaces, and other non-alphabetical characters remain unchange
   expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
 
+test('Negative shift', () => {
+  expect(caesarCipher('Hello, World!', -3)).toBe('Ebiil, Tloia!');
+});
+
 // Analyze Array
 test('analyzeArray return object', () => {
   const data = analyzeArray([1, 8, 3, 4, 2, 6]);
